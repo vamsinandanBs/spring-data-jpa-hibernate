@@ -1,8 +1,19 @@
 package com.vamsi.spring_data_jpa_hibernate.course;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
+@Entity // we can put table name here (name="some_db_table")
 public class Course {
+
+    @Id
     private long id;
+
+    @Column(name="name")
     private String name;
+
+    @Column(name="author")
     private String author;
 
     public Course(){
