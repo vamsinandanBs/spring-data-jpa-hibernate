@@ -20,12 +20,12 @@ public class CourseJPARepository {
         entityManager.merge(course);
    }
 
-    public Course Select(int id) {
+    public Course Select(long id) {
 
         return entityManager.find(Course.class,id);
     }
 
-    public void delete(int id) {
+    public void delete(long id) {
     Course course = entityManager.find(Course.class,id);
     entityManager.remove(course);
     }
